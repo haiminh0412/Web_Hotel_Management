@@ -1,0 +1,120 @@
+
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .item-booking {
+            height: 500px;
+            background-color: #fff;
+            width: 280px;
+            border: 1px solid rgba(0, 0, 0, .125);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-right: 20px; /* Khoảng cách giữa các phần */
+            display: inline-block;
+            margin: 40px;
+        }
+
+        .booking-image img {
+            width: 100%;
+            height: 200px;
+        }
+
+        .booking-content {
+            padding: 20px;
+        }
+
+        h4 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+         .item {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .item1 i, .item i {
+            font-size: 13px;
+            color: #333;
+        }
+
+        p {
+            margin: 0;
+            font-size: 14px;
+            color: #555;
+            padding: 5px;
+        }
+        .button-submit {
+            background-color: bisque;
+            color: black;
+            border: none;
+            font-size: 16px;
+            width: 150px; /* Độ rộng mới cho nút */
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px; 
+            margin-left: 29px;
+            text-align: center; 
+            text-decoration: none;
+            display: inline-block; 
+        }
+        
+        .button-submit:hover {
+            background-color: #555; /* Màu nền nút khi di chuột qua */
+        }
+        .form-booking{
+            display: none;
+        }
+        .form-booking.open{
+            display: flex;
+        }
+        
+.form-booking {
+    width: 350px; 
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* CSS cho các label và input */
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* CSS cho nút Đặt Phòng */
+.button-submit-hide {
+    width: 250px;
+    color: black;
+    padding: 10px 20px;
+    border: solid 1px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 70px;
+}
+
+.button-submit-hide:hover {
+    background-color: red;
+}
