@@ -32,7 +32,7 @@ $phone_infor = $row['PhoneNumber'];
 
  if(isset($_POST['submit'])){
      $query =  "INSERT INTO `information_restaurant`(`name`, `phone`, `date_booking`, `table_restaurant`, `email`, `note`,`room_name`,`username`) VALUES ('$name_booking','$phone','$date','$options','$email','$note','$name_room','$username_booking')";
-     $condition = "Select * from information_restaurant where ('$options','$date')  IN  (select table_restaurant,date_booking from information_restaurant )";    
+     $condition = "Select * from information_restaurant where ('$options','$date','$name_room')  IN  (select table_restaurant,date_booking,room_name from information_restaurant )";    
      $result = DBHelper::executeResult($condition);
       if($result->num_rows > 0){
          echo "<script> alert('Bàn Đã Được Đặt Vào Ngày Này Vui Lòng Đặt Bàn Khác') </script>";
@@ -56,7 +56,7 @@ $phone_infor = $row['PhoneNumber'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Poppins:ital,wght@0,400;0,500;1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="booking_bars_form.css">
+    <link rel="stylesheet" href="css/booking_bars_form.css">
     <title>Document</title>
 
 </head>

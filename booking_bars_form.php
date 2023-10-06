@@ -34,7 +34,7 @@ $phone_infor = $row['PhoneNumber'];
     if(isset($_POST['person'])){
         $person = $_POST['person'];
     }
-    $query = "Select * from service_event_room where room_name = '$name_room'";
+    $query = "Select * from bars_club where room_name = '$name_room'";
     $res = DBHelper::executeResult($query);
     $get_row = $res->fetch_assoc();
     $price = $get_row['price'];
@@ -42,7 +42,7 @@ $phone_infor = $row['PhoneNumber'];
     if(isset($_POST['submit'])){
         $query =  "INSERT INTO `information_bars`(`name`, `phone`, `date`, `table_book`, `price`, `person`, `email`,`room_name`,`username`,`note`) VALUES ('$name_booking','$phone','$date','$options_room','$price_room','$person','$email','$name_room','$username_booking','$note')";
         $date = date("Y-m-d", strtotime($date));
-        $condition = "Select * from information_bars where ('$options_room','$date')  IN  (select table_book,date from information_bars )";    
+        $condition = "Select * from information_bars where ('$options_room','$date','$name_room')  IN  (select table_book,date,room_name from information_bars )";    
         $result = DBHelper::executeResult($condition);
         if($result->num_rows > 0){
             echo "<script> alert('Bàn Đã Được Đặt Vui Lòng Chọn Bàn Khác') </script>";
@@ -68,7 +68,7 @@ $phone_infor = $row['PhoneNumber'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Poppins:ital,wght@0,400;0,500;1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="booking_bars_form.css">
+    <link rel="stylesheet" href="css/booking_bars_form.css">
     <title>Document</title>
 
 </head>
