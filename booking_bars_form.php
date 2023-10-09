@@ -6,7 +6,7 @@ $result = DBHelper::executeResult($select);
 $row = $result->fetch_assoc();
 $name_infor = $row['Name'];
 $email_infor = $row['Email'];
-$phone_infor = $row['PhoneNumber'];
+$phone_infor = $row['phoneNumber'];
     if(isset($_GET['room_name'])){
         $name_room = $_GET['room_name'];
       }

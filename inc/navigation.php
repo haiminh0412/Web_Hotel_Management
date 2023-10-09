@@ -86,7 +86,7 @@
 <body>
     <div class="navigation">
         <ul class="nav-item">
-            <li><a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index_after.php">HOTEL</a></li>
+            <li><a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php">HOTEL</a></li>
             <li><a href="booking_service.php">Hội Họp Sự Kiện</a></li>
             <li><a href="booking_bars.php">Club & Bars</a></li>
             <li><a href="Resturant.php">Nhà Hàng </a></li>
